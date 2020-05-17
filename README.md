@@ -18,6 +18,10 @@ conda install -c observingClouds DSHIPconverter
 ## Converting
 Example of converting DSHIP data:
 ```bash
+DSHIP2nc -i '/path/to/DSHIP/folder/*.dat' -o DSHIP_converted.nc
+```
+or in case the repository is only cloned
+```bash
 python convert_DSHIP.py -i '/path/to/DSHIP/folder/*.dat' -o DSHIP_converted.nc
 ```
 
