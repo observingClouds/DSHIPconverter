@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="DSHIPconverter",
+    name="dshipconverter",
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     author="observingClouds",
@@ -24,6 +24,7 @@ setuptools.setup(
     python_requires='>=3.6',
     install_requires=["xarray>=0.11", "numpy", "netcdf4", "tqdm", "pandas"],
     entry_points={'console_scripts':
-                    ['DSHIP2nc=DSHIPconverter.convert_DSHIP:main',
-                     ]}
+                    ['DSHIP2nc=DSHIPconverter.convert_DSHIP:main'
+                     ]},
+    package_data={"dshipconverter": ["metadata_DSHIP.json"]}
 )

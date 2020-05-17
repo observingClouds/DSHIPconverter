@@ -11,7 +11,8 @@ import time
 import numpy as np
 import pandas as pd
 
-sys.path.append('.')
+curr_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(curr_dir)
 from _helpers_dship import *
 
 
@@ -23,7 +24,7 @@ def get_args():
                         help='Provide the DSHIP files or its file format', required=True)
     parser.add_argument('-m', '--metadatafile', metavar="metadata.json",
                         help='Provide the location of the metadata JSON file', required=False,
-                        default='metadata_DSHIP.json')
+                        default=curr_dir+'/metadata_DSHIP.json')
     parser.add_argument('-v', '--verbose', metavar="DEBUG",
                         help='Set the level of verbosity [DEBUG, INFO,'
                              ' WARNING, ERROR]',
@@ -51,7 +52,7 @@ def main():
 
     logging.debug('Gathering version information')
     try:
-        import DSHIPconverter
+        import dshipconverter as DSHIPconverter
         __version__ = DSHIPconverter.__version__
         package_version_set = True
     except (ModuleNotFoundError, AttributeError):
@@ -61,7 +62,7 @@ def main():
 
     try:
         git_module_version = sp.check_output(
-            ["git", "describe", "--always", "--dirty"], stderr=sp.STDOUT).strip()
+            ["git", "describe", "--always", "--dirty"], stderr=sp.STDOUT).strip().decode()
         git_version_set = True
     except sp.CalledProcessError:
         logging.debug('No git-version could be found.')
