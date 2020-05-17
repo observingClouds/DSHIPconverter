@@ -1,0 +1,92 @@
+{"meta_data":
+    {
+        "time":
+        {
+            "standard_name":"time",
+            "units": "seconds since 1970-01-01 00:00:00 UTC",
+            "calendar": "standard"
+        },
+        "lat":
+        {
+            "standard_name":"latitude",
+            "units":"degrees_north"
+        },
+        "lon":
+        {
+            "standard_name":"longitude",
+            "units":"degrees_east"
+        },
+        "p":
+        {
+            "standard_name":"pressure",
+            "units":"hPa",
+            "description": "corrected to waterline (instrument at 11.2m above waterline)",
+            "coordinates": "time lat lon",
+            "_FillValue": "NaN"
+        },
+        "Tport":
+        {
+            "standard_name":"air_temperature",
+            "units":"degree_Celsius",
+            "description": "sensor at portside (mounted at 29.1 m)",
+            "coordinates": "time lat lon"
+        },
+        "Tstar":
+        {
+            "standard_name":"air_temperature",
+            "units":"degree_Celsius",
+            "description": "sensor at starboard (mounted at 29.1 m)",
+            "coordinates": "time lat lon"
+        },
+        "RHport":
+        {
+            "standard_name":"relative_humidity",
+            "units":"",
+            "description": "sensor at portside (mounted at 29.1 m)",
+            "coordinates": "time lat lon"
+        },
+        "RHstar":
+        {
+            "standard_name":"relative_humidity",
+            "units":"",
+            "description": "sensor at starboard (mounted at 29.1 m)",
+            "coordinates": "time lat lon"
+        },
+        "DD_true":
+        {
+            "standard_name": "wind_from_direction",
+            "units": "degree",
+            "long_name": "true wind direction (corrected for boat speed and course)",
+            "description": "sensor mounted at 35.0 m",
+            "coordinates": "time lat lon"
+        },
+        "FF_true":
+        {
+            "standard_name": "wind_speed",
+            "units": "ms-1",
+            "long_name": "true wind speed (corrected for boat speed and course)",
+            "description": "sensor mounted at 35.4 m",
+            "coordinates": "time lat lon"
+        },
+        "SSTport":
+        {
+            "standard_name": "sea_surface_temperature",
+            "units": "degree_Celsius",
+            "description": "sensor at portside (mounted at -2.1 m)",
+            "coordinates": "time lat lon"
+        },
+        "SSTstar":
+        {
+            "standard_name": "sea_surface_temperature",
+            "units": "degree_Celsius",
+            "description": "sensor at starboard (mounted at -2.1 m)",
+            "coordinates": "time lat lon"
+        },
+        "speed":
+        {
+            "standard_name": "platform_speed_wrt_ground",
+            "units":"knots",
+            "coordinates": "time lat lon"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+name: DSHIPconvEnv
+channels:
+  - conda-forge
+dependencies:
+  - conda > 4.6
+  - python=3.6
+  - xarray>=0.11
+  - numpy
+  - netcdf4
+  - tqdm
+  - pandas
+  - dask

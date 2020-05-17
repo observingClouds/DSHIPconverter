@@ -1,0 +1,6 @@
+xarray>=0.11
+numpy
+netcdf4
+tqdm
+pandas
+dask

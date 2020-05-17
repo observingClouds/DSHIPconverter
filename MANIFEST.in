@@ -1,0 +1,2 @@
+include versioneer.py
+include DSHIPconverter/_version.py
